@@ -18,7 +18,7 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-          <Button>Book A Flight</Button>
+          <Button primary="true" round="true" to="/trips">Book A Flight</Button>
       </NavBtn>
     </Nav>
   );
