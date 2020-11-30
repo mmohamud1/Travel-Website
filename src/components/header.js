@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import {FaBars} from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa';
 
 const Header = () => {
   return (
     <Nav>
       <NavLink to='/'>Mo-Travel</NavLink>
-        <Bars />
+      <Bars />
     </Nav>
   );
 };
@@ -25,26 +25,26 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
-    color: white;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
 `;
 
 const Bars = styled(FaBars)`
-    display: none;
-    color: #fff;
+  display: none;
+  color: #fff;
 
-    @media screen and (max-width: 760px) {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 75%);
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
-`
+  @media screen and (max-width: 760px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;
