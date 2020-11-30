@@ -61,6 +61,7 @@ const Bars = styled(FaBars)`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  margin-right: -40px;
 
   @media screen and (max-width: 760px) {
     display: none;
