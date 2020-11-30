@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import {FaBars} from 'react-icons/fa'
 
 const Header = () => {
   return (
     <Nav>
       <NavLink to='/'>Mo-Travel</NavLink>
+
     </Nav>
   );
 };
@@ -22,4 +24,16 @@ const Nav = styled.nav`
   position: relative;
 `;
 
-const NavLink = styled(Link)``;
+const NavLink = styled(Link)`
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+`;
+
+const Bars = styled(FaBars)`
+    display: none;
+`
