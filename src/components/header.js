@@ -2,12 +2,21 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
+import { menuData } from '../data/MenuData';
 
 const Header = () => {
   return (
     <Nav>
       <NavLink to='/'>Mo-Travel</NavLink>
       <Bars />
+      <NavMenu>
+        {menuData.map((menu, index) => (
+          <NavLink to={menu.link} key={index}>
+            {menu.title}
+          </NavLink>
+        ))}
+      </NavMenu>
+      <NavBtn>Hey</NavBtn>
     </Nav>
   );
 };
@@ -46,5 +55,24 @@ const Bars = styled(FaBars)`
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
+  }
+`;
+
+const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+`;
+
+const NavBtn = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+
+  @media screen and (max-width: 760px) {
+    display: none;
   }
 `;
