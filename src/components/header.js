@@ -1,10 +1,12 @@
 import { Link } from "gatsby"
 import React from "react"
 
-const Header = () => (
- <>
- </>
-)
+const Header = () => {
+    return (
+        <h1>Header</h1>
+    )
+}
+    
 
 
 
