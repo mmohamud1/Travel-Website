@@ -102,4 +102,5 @@ const HeroH1 = styled.h1`
 const HeroP = styled.p`
   font-size: clamp(1rem, 3vw, 3rem);
   margin-bottom: 2rem;
+  font-weight: 300;
 `;

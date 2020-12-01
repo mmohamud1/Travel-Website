@@ -12,9 +12,9 @@ const Header = () => {
       <Bars />
       <NavMenu>
         {menuData.map((menu, index) => (
-          <NavLink to={menu.link} key={index}>
+          <NavLinkTwo to={menu.link} key={index}>
             {menu.title}
-          </NavLink>
+          </NavLinkTwo>
         ))}
       </NavMenu>
       <NavBtn>
@@ -37,6 +37,19 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+`;
+
+const NavLinkTwo = styled(Link)`
+  font-family: 'Roboto', sans-serif;
   color: white;
   display: flex;
   align-items: center;
