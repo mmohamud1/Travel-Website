@@ -11,9 +11,11 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroItems>
-          <HeroH1>Unreal Desitinations</HeroH1>
+          <HeroH1>Great Desitinations</HeroH1>
           <HeroP>Out of this world</HeroP>
-          <Button primary="true" big="true" round="true" to="/trpis">Travel Now</Button>
+          <Button primary='true' big='true' round='true' to='/trpis'>
+            Travel Now
+          </Button>
         </HeroItems>
       </HeroContent>
     </HeroContainer>
@@ -76,24 +78,25 @@ const HeroContent = styled.div`
 `;
 
 const HeroItems = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    max-height: 100%;
-    padding: 0;
-    color: #fff;
-    line-height: 1.1;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  max-height: 100%;
+  padding: 0;
+  color: #fff;
+  line-height: 1.1;
+  font-weight: bold;
 `;
 
 const HeroH1 = styled.h1`
-    font-size: clamp(1.5rem, 6vw, 4rem);
-    margin-bottom: 1.5rem;
-    letter-spacing: 3px;
-    padding: 0 1rem;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+  padding: 0 1rem;
+  font-family: 'Permanent Marker', cursive;
 `;
 
 const HeroP = styled.p`
