@@ -59,6 +59,11 @@ const NavLinkTwo = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
+  &:hover {
+    color: #a679d2;
+    transition: 0.3s ease-out;
+  }
 `;
 
 const Bars = styled(FaBars)`
