@@ -11,10 +11,10 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroItems>
-          <HeroH1>Great Desitinations</HeroH1>
-          <HeroP>Award Winning Packages</HeroP>
-          <Button primary='true' big='true' round='true' to='/trpis'>
-            Travel Now
+          <HeroH1>great destinations</HeroH1>
+          <HeroP>award winning packages</HeroP>
+          <Button primary='true' big='true' round='true' to='/trips'>
+            travel now
           </Button>
         </HeroItems>
       </HeroContent>
@@ -92,15 +92,17 @@ const HeroItems = styled.div`
 `;
 
 const HeroH1 = styled.h1`
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
   margin-bottom: 1.5rem;
   letter-spacing: 3px;
   padding: 0 1rem;
   font-family: 'Permanent Marker', cursive;
+  text-transform: capitalize;
 `;
 
 const HeroP = styled.p`
   font-size: clamp(1rem, 3vw, 3rem);
   margin-bottom: 2rem;
   font-weight: 300;
+  text-transform: capitalize;
 `;

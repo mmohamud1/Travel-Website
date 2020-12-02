@@ -15,6 +15,7 @@ export const Button = styled(Link)`
   text-decoration: none;
   transition: 0.3s !important;
   border-radius: ${({ round }) => (round ? '50px' : 'none')};
+  text-transform: capitalize;
 
   &:hover {
     background: ${({ primary }) => (primary ? '#f26a2e ' : '#8040bf')};
