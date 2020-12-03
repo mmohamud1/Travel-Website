@@ -76,6 +76,7 @@ const ProductsHeading = styled.div`
 const ProductWrapper = styled.div``;
 
 const ProductCard = styled.div``;
+
 const ProductInfo = styled.div``;
 const TextWrap = styled.div``;
 const ProductTitle = styled.div``;
