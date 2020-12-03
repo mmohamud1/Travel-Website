@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Trips = () => {
@@ -26,7 +26,7 @@ const Trips = () => {
   `);
 
   function getTrips(data) {
-    const tripsArray = [];
+    const tripsArray = []
     data.allTripsJson.edges.forEach((item, index) => {
       tripsArray.push(
         <div key={index}>
@@ -64,4 +64,5 @@ const ProductsHeading = styled.div`
   color: #000;
 `;
 
-const ProductWrapper = styled.div``;
+const ProductWrapper = styled.div`
+`;
