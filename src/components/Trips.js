@@ -15,7 +15,7 @@ const Trips = () => {
             name
             img {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1000, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -35,6 +35,7 @@ const Trips = () => {
             src={item.node.img.childImageSharp.fluid.src}
             alt={item.node.alt}
             fluid={item.node.img.childImageSharp.fluid}
+            
           />
           <ProductInfo>
             <TextWrap>
@@ -78,7 +79,10 @@ const ProductWrapper = styled.div``;
 const ProductCard = styled.div``;
 
 const ProductInfo = styled.div``;
+
 const TextWrap = styled.div``;
+
 const ImLoaction = styled.div``;
+
 const ProductTitle = styled.div``;
 
