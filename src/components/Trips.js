@@ -30,7 +30,7 @@ const Trips = () => {
     const tripsArray = [];
     data.allTripsJson.edges.forEach((item, index) => {
       tripsArray.push(
-        <div key={index}>
+        <ProductCard key={index}>
           <Img
             src={item.node.img.childImageSharp.fluid.src}
             alt={item.node.alt}
@@ -43,7 +43,7 @@ const Trips = () => {
             </TextWrap>
             <Button to='/trips'>{item.node.button}</Button>
           </ProductInfo>
-        </div>
+        </ProductCard>
       );
     });
     return tripsArray;
@@ -74,3 +74,9 @@ const ProductsHeading = styled.div`
 `;
 
 const ProductWrapper = styled.div``;
+
+const ProductCard = styled.div``;
+const ProductInfo = styled.div``;
+const TextWrap = styled.div``;
+const ProductTitle = styled.div``;
+const ImLoaction = styled.div``;
