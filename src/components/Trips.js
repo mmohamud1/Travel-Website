@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { Button } from './Button';
 
 const Trips = () => {
   const data = useStaticQuery(graphql`
-    query TripsQuery {
+    query MyQuery {
       allTripsJson {
         edges {
           node {
@@ -26,14 +27,22 @@ const Trips = () => {
   `);
 
   function getTrips(data) {
-    const tripsArray = []
+    const tripsArray = [];
     data.allTripsJson.edges.forEach((item, index) => {
       tripsArray.push(
         <div key={index}>
           <Img
             src={item.node.img.childImageSharp.fluid.src}
+            alt={item.node.alt}
             fluid={item.node.img.childImageSharp.fluid}
           />
+          <ProductInfo>
+            <TextWrap>
+              <ImLoaction />
+              <ProductTitle>{item.node.name}</ProductTitle>
+            </TextWrap>
+            <Button to='/trips'>{item.node.button}</Button>
+          </ProductInfo>
         </div>
       );
     });
@@ -64,5 +73,4 @@ const ProductsHeading = styled.div`
   color: #000;
 `;
 
-const ProductWrapper = styled.div`
-`;
+const ProductWrapper = styled.div``;
