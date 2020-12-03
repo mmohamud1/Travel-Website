@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Trips = () => {
   const data = useStaticQuery(graphql`
@@ -24,10 +25,25 @@ const Trips = () => {
     }
   `);
 
+  function getTrips(data) {
+    const tripsArray = [];
+    data.allTripsJson.edges.forEach((item, index) => {
+      tripsArray.push(
+        <div key={index}>
+          <Img
+            src={item.node.img.childImageSharp.fluid.src}
+            fluid={item.node.img.childImageSharp.fluid}
+          />
+        </div>
+      );
+    });
+    return tripsArray;
+  }
+
   return (
     <ProductsContainer>
       <ProductsHeading>Heading</ProductsHeading>
-      <ProductWrapper>Wrapper</ProductWrapper>
+      <ProductWrapper>{getTrips(data)}</ProductWrapper>
     </ProductsContainer>
   );
 };
