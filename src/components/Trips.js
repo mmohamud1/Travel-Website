@@ -34,8 +34,7 @@ const Trips = () => {
           <Img
             src={item.node.img.childImageSharp.fluid.src}
             alt={item.node.alt}
-            fluid={item.node.img.childImageSharp.fluid}
-            
+            fluid={item.node.img.childImageSharp.fluid}     
           />
           <ProductInfo>
             <TextWrap>
