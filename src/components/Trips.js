@@ -15,7 +15,7 @@ const Trips = () => {
             name
             img {
               childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
+                fluid(maxHeight: 600, maxWidth: 600) {
                   ...GatsbyImageSharpFluid
                 }
               }
