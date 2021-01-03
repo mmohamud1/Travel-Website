@@ -106,18 +106,33 @@ const ProductImg = styled(Img)`
   border-radius: 10px;
   filter: brightness(70%);
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
 
   &:hover {
-    filter: brightness(100%)
+    filter: brightness(100%);
   }
-`
-
+`;
 
 const ProductInfo = styled.div`
   display: flex;
-  flex-direction: 
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 2rem;
+
+  @media screen and (max-width: 280px) {
+    padding: 0 1rem;
+  }
 `;
 
-const TextWrap = styled.div``;
+const TextWrap = styled.div`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 375px;
+`;
 
-const ProductTitle = styled.div``;
+const ProductTitle = styled.div`
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+`;
