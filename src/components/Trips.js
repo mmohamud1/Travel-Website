@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import { Button } from './Button';
 import { ImLocation } from 'react-icons/im';
 
-const Trips = () => {
+const Trips = ({heading}) => {
   const data = useStaticQuery(graphql`
     query MyQuery {
       allTripsJson {
@@ -42,7 +42,18 @@ const Trips = () => {
               <ImLocation />
               <ProductTitle>{item.node.name}</ProductTitle>
             </TextWrap>
-            <Button to='/trips'>{item.node.button}</Button>
+            <Button
+              to='/trips'
+              primary='true'
+              round='true'
+              css={`
+                position: absolute;
+                top: 420px;
+                font-size: 14px;
+              `}
+            >
+              {item.node.button}
+            </Button>
           </ProductInfo>
         </ProductCard>
       );
@@ -52,7 +63,7 @@ const Trips = () => {
 
   return (
     <ProductsContainer>
-      <ProductsHeading>Heading</ProductsHeading>
+      <ProductsHeading>{heading}</ProductsHeading>
       <ProductWrapper>{getTrips(data)}</ProductWrapper>
     </ProductsContainer>
   );
@@ -62,8 +73,7 @@ export default Trips;
 
 const ProductsContainer = styled.div`
   min-height: 100vh;
-  padding: 5rem calc((100vw -1300px) / 2);
-  background: violet;
+  padding: 5rem calc((100vw - 1300px) / 2);
   color: #fff;
 `;
 
@@ -72,6 +82,7 @@ const ProductsHeading = styled.div`
   text-align: center;
   margin-bottom: 5rem;
   color: #000;
+  font-family: 'Permanent Marker', cursive;
 `;
 
 const ProductWrapper = styled.div`
@@ -81,11 +92,11 @@ const ProductWrapper = styled.div`
   justify-items: center;
   padding: 0 2rem;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (max-width: 868px) {
+  @media screen and (max-width: 668px) {
     grid-template-columns: 1fr;
   }
 `;
